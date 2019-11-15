@@ -26,5 +26,5 @@ flutter:
    
   - assets/login.jpeg
   # - assets/home.jpeg
-  # - assets/tick.png
+  - assets/logIn.png
 

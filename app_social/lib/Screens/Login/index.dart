@@ -7,7 +7,7 @@ import 'dart:async';
 import '../../Components/SignUpLink.dart';
 import '../../Components/Form.dart';
 import '../../Components/SignInButton.dart';
-// import '../../Components/WhiteTick.dart';
+import '../../Components/WhiteTick.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 
@@ -45,7 +45,7 @@ class LoginScreenState extends State<LoginScreen>
     return showDialog(
           context: context,
           child: new AlertDialog(
-            title: new Text('Are you sure?'),
+            title: new Text('¿Estas seguro?'),
             actions: <Widget>[
               new FlatButton(
                 onPressed: () => Navigator.of(context).pop(false),
@@ -93,9 +93,9 @@ class LoginScreenState extends State<LoginScreen>
                           new Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: <Widget>[
-                              // new Tick(image: tick),
-                              // new FormContainer(),
-                              // new SignUp()
+                              new Tick(image: tick),
+                              new FormContainer(),
+                              new SignUp()
                             ],
                           ),
                           animationStatus == 0

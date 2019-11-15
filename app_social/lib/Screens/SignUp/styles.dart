@@ -5,7 +5,7 @@ DecorationImage backgroundImage = new DecorationImage(
   fit: BoxFit.cover,
 );
 
-DecorationImage tick = new DecorationImage(
+DecorationImage pick = new DecorationImage(
   image: new ExactAssetImage('assets/logIn.png'),
   fit: BoxFit.cover,
 );

@@ -16,11 +16,11 @@ class Routes {
               settings: settings,
             );
 
-          // case '/home':
-          //   return new MyCustomRoute(
-          //     builder: (_) => new HomeScreen(),
-          //     settings: settings,
-          //   );
+          case '/home':
+            return new MyCustomRoute(
+              builder: (_) => new LoginScreen(),
+              settings: settings,
+            );
         }
       },
     ));
