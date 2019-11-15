@@ -1,0 +1,9 @@
+CREATE TABLE dependencia (
+    ID int NOT NULL,
+    nombre varchar(100),
+    zona varchar(200),
+    id_reporte INT NOT NULL,
+    FOREIGN KEY (id_reporte)
+    REFERENCES reporte(ID),
+    PRIMARY KEY (ID)
+    );
