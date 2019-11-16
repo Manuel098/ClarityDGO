@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { Globals } from './globals';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
@@ -15,6 +16,7 @@ import {
   MatSidenavModule, MatListModule, MatTableModule, MatCheckboxModule
 } from '@angular/material';
 import { HeaderComponent } from './header/header.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,7 @@ import { HeaderComponent } from './header/header.component';
     MatToolbarModule, MatNativeDateModule, MatIconModule,
     MatSidenavModule, MatListModule, MatTableModule, MatCheckboxModule
   ],
-  providers: [],
+  providers: [Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
