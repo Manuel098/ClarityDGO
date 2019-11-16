@@ -1,0 +1,75 @@
+<div class="nadbar">
+    <button mat-flat-button routerLink="/index" mat-button>
+        <i class="material-icons">
+            account_circle
+        </i>
+        <p>Perfil</p>
+    </button>
+    <button mat-flat-button routerLink="/index" mat-button>
+        <i class="material-icons">
+            hourglass_empty
+        </i>
+        <p>Pago de Servicios</p>    
+    </button>
+    <button mat-flat-button routerLink="/index" mat-button>
+        <i class="material-icons">
+            gavel
+        </i>
+        <p>Denuncia</p>
+        <button mat-flat-button routerLink="/index" mat-button>
+            <i class="material-icons">
+                account_circle
+            </i>
+            <p>Perfil</p>
+        </button>
+        <button mat-flat-button routerLink="/index" mat-button>
+            <i class="material-icons">
+                hourglass_empty
+            </i>
+            <p>Pago de Servicios</p>    
+        </button>
+        <button mat-flat-button routerLink="/denuncia" mat-button>
+            <i class="material-icons">
+                gavel
+            </i>
+            <p>Denuncia</p>
+        </button>
+        <button mat-flat-button routerLink="/index" mat-button>
+            <i class="material-icons">
+                touch_app
+            </i>
+            <p>Seguimiento</p>    
+        </button>
+        <button mat-flat-button routerLink="/resultados" mat-button>
+            <i class="material-icons">
+                favorite
+            </i>
+            <p>Resultados</p>
+        </button>
+        <button mat-flat-button routerLink="/programas" mat-button>
+            <i class="material-icons">
+                work
+            </i>
+            <p>Programas</p>    
+        </button>
+    <span>
+        <button mat-flat-button routerLink="/index" mat-button *ngIf="!userIsAuthenticated" (click)="openLogin()">
+            <i class="material-icons">
+                account_circle
+            </i>                
+            <p>Iniciar Sesión</p>    
+        </button>
+        <button mat-flat-button routerLink="/index" mat-button *ngIf="!userIsAuthenticated" (click)="openSignUp()">
+            <i class="material-icons">
+                supervisor_account
+            </i>                
+            <p>Registrarse</p>    
+        </button>
+        <button mat-flat-button routerLink="/index" mat-button *ngIf="userIsAuthenticated">
+            <i class="material-icons">
+                brightness_2
+            </i>
+            <p>Cerrar Sesión</p>    
+        </button>
+    </span>
+</div>

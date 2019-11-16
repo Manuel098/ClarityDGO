@@ -1,24 +1,27 @@
-# Best-Flutter-UI-Templates
-completely free for everyone. Its build-in Flutter Dart.
+# ClarityWeb
 
-![Image](best_flutter_ui_templates/assets/hotel/hotel_booking.png)
-![Image](best_flutter_ui_templates/assets/fitness_app/fitness_app.png)
-![Image](images/custom_drawer.png)
-![Image](best_flutter_ui_templates/assets/design_course/design_course.png)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 
-<<<<<<< Updated upstream
-Crear una aplicacion para la denuncia ciudadana que llegue a la dependencia de gobierno correspondiente, de igual manera en esta aplicacion se presentara el seguimiento de la denuncia, las denuncias ya resueltas y a la par muestra los programas y datos publicos asi como las convocatorias de estas dependencias
+## Development server
 
-Clarity DGO es una aplicacion, sistema web y backend enfocado en la denucnia de errores y anomalias. Este proyecto tiene como meta ser una herramienta que ayude a solucionar la problematica de paz, justicia e instituciones solidas, teniendo enfoque en las instituciones, pero, ¿como logra solucionar este problema clarity DGO? la respuesta es que no lo busca hacer por medios propios pues fue diseñada como una herramienta que pueda optimizar los procesos de trabajo en cuanto a procesar la informacion de los reportes y de igual manera generar una base de datos para el usuario (ciudadanos) en la cual se pueden ver los casos resueltos y por que dependencias de gobierno fueron solucionadas. Para gobierno sera de utilidad debido a que cataloga la denuncia y la manda al area encargada de solucionar el reporte con un valor que represente la urgencia, de esta manera el responsable del area contara con informacion clara y consisa para tomar desiciones y accion. 
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Al ser pensada para trabajarse con gobierno se nos presenta un obstaculo, en caso de que gobierno no pueda financiar esta idea se ideo un modelo de negocios y un plan de financiamiento para este proyecto. Basados en el bissnes model canvas optamos por agregar la funcion de pago de servicios en conjunto con socios claves que de igual manera seria los clientes de nuestro servicio de detenccion de errores y fallos mejorando su servicio al cliente y de igual manera optimizando el trabajo del soporte tecnico. De esta manera generamos un diferencial y proponemos un plus a la empresa, generando ingresos a partir de comisiones por el pago de servicios el cual sera suficiente para cubri todos los gastos de operacion que sera de 276 dolares al mes ($5244 aporximadamente). Como recursos clave consideramos el almacenamiento en la nube y con la gran capacidad que nos ofrece nos permite el uso de big data, small data y con esto la prediccion de tendencias como valor agregado anuestra aplicacion.
+## Code scaffolding
 
-Francisco Javier Felix Godoy
-Alejando Parra Retana
-José Manuel Vladez Gonzalez
-Christian Antonio Avila Sucedo
-=======
-### Some Screenshots
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-<img src="images/hotel_booking.gif" height="300em"><img src="images/custom_drawer.gif" height="300em"><img src="images/fitness_app.gif" height="300em" /> <img src="images/design_course.gif" height="300em" />
->>>>>>> Stashed changes
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

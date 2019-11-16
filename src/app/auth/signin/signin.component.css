@@ -1,0 +1,28 @@
+.com{
+    display: inline-block;
+}
+hr{
+    width: 80%;
+    margin-left: 10%;
+}
+mat-form-field{
+    display: block;
+}
+.card{
+    text-align: center;
+    top: 1%;
+    align-items: center;
+    justify-content: center;
+}
+mat-card-content form{
+    align-items: center;
+    justify-content: center;
+}
+button{
+    display: inline-block;
+    margin: 0 1rem 1rem; 
+}
+button:hover{
+    background: #86fbff5e;
+    color: #6d1717;
+}

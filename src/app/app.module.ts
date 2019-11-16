@@ -1,0 +1,58 @@
+
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { Globals } from './globals';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { IndexComponent } from './index/index.component';
+import { FooterComponent } from './footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SigninComponent } from './auth/signin/signin.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { SignupComponent } from './auth/signup/signup.component';
+
+import {
+  MatButtonModule, MatCardModule, MatDialogModule,
+  MatDividerModule, MatExpansionModule, MatFormFieldModule,
+  MatInputModule, MatPaginatorModule, MatProgressSpinnerModule,
+  MatToolbarModule, MatNativeDateModule, MatIconModule,
+  MatSidenavModule, MatListModule, MatTableModule, MatCheckboxModule,MAT_DIALOG_DATA
+} from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
+import { from } from 'rxjs';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { ProgramasComponent } from './programas/programas.component';
+import { PlataformaComponent } from './plataforma/plataforma.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    IndexComponent,
+    SigninComponent,
+    SignupComponent,
+    FooterComponent,
+    HeaderComponent,
+    UserProfileComponent,
+    ProgramasComponent,
+    PlataformaComponent
+  ],
+  imports: [
+    BrowserModule,FormsModule, ReactiveFormsModule,
+
+    AppRoutingModule,    BrowserAnimationsModule, HttpClientModule,
+    MatButtonModule, MatCardModule, MatDialogModule,
+    MatDividerModule, MatExpansionModule, MatFormFieldModule,
+    MatInputModule, MatPaginatorModule, MatProgressSpinnerModule,
+    MatToolbarModule, MatNativeDateModule, MatIconModule,
+    MatSidenavModule, MatListModule, MatTableModule, MatCheckboxModule,
+    MatGridListModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
+  entryComponents: [SigninComponent, SignupComponent]
+
+})
+export class AppModule { }
