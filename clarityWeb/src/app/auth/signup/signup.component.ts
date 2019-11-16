@@ -1,10 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {NgForm} from '@angular/forms';
-import {AuthService} from '../auth.service';
-import { Globals } from '../../globals';
-import {Subscription} from 'rxjs';
-import {HeaderComponent} from '../../header/header.component';
-import {Router} from '@angular/router';
+import { Component, OnInit, Inject } from '@angular/core';
+import { NgForm, FormGroup, FormBuilder } from '@angular/forms';
+import { AuthService } from '../auth.service';
+import { HeaderComponent } from '../../header/header.component';
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
 
 @Component({
   selector: 'app-signup',
@@ -13,42 +11,23 @@ import {Router} from '@angular/router';
 })
 export class SignupComponent implements OnInit {
 
-  userType:any;
-  userIsAuthenticated = false;
-  private authListenerSubs: Subscription;
-  constructor(private authSrv: AuthService, private globals: Globals, private router: Router, private headCompon: HeaderComponent) {
-    router.events.subscribe((val) => {
-      this.ngOnInit();
-    });
+  form: FormGroup;
+  description:string;
+  
+  
+  constructor(private authSrv: AuthService,private fb: FormBuilder,
+    private dialogRef: MatDialogRef<HeaderComponent>,
+    @Inject(MAT_DIALOG_DATA) data) {
+
+    this.description = data.description;
    }
-  ngOnInit() {
-    if (this.userIsAuthenticated) {
-      this.globals.getUsType().then(res => {
-        this.userType = res;
-      });
-    }
-    else {
-      this.userType = 0;
-    }
-    this.userIsAuthenticated = this.authSrv.getIsAuth();
-    this.authListenerSubs = this.authSrv.getAuthStatusListener()
-    .subscribe(isAuthenticated => {
-      this.userIsAuthenticated = isAuthenticated;
-    });
+  ngOnInit() {}
+
+  save() {
+    this.dialogRef.close(this.form.value);
   }
 
-  onFormSubmit(form: NgForm) {
-    if (!form.valid) {
-      alert('Favor de llenar todos los campos');
-      return;
-    } else if (form.value.password !== form.value.password2) {
-      alert('Las contraseñas no coniciden');
-      return;
-    } else {
-    this.authSrv.createUserP(form.value.email, form.value.user, form.value.password);
-    form.value.email = '';
-    form.value.user = '';
-    form.value.password = '';
-    }
+  close() {
+    this.dialogRef.close();
   }
 }

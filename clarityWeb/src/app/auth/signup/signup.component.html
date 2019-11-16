@@ -1,24 +1,24 @@
-<div *ngIf="!userIsAuthenticated ">
-    <mat-card class="card">
-      <mat-card-title>Registro</mat-card-title>
-      <hr>
-      <mat-card-content>
-        <form #noticiaForm="ngForm" (submit)="onFormSubmit(noticiaForm)">
-          <mat-form-field>
-            <input placeholder="Nombre de usuario" matInput name="user" ngModel type="text" #emailInput="ngModel" required>
-          </mat-form-field>
-          <mat-form-field>
-            <input placeholder="Correo" matInput name="email" ngModel type="email" #usernameInput="ngModel" required email>
-          </mat-form-field>
-          <mat-form-field class="com">
-            <input placeholder="Contraseña" matInput name="password" ngModel type="password" #passwordInput="ngModel" required>
-          </mat-form-field>
-          <mat-form-field class="com">
-            <input placeholder="Confirmar Contraseña" matInput name="password2" ngModel type="password" #password2Input="ngModel" required>
-          </mat-form-field>
-          <button mat-raised-button (click)="signup=!signup" class="btn" type="submit">Registrarse</button>
-        </form>
-        <button mat-raised-button class="cancel" (click)="closeModal()">Cancelar</button>
-    </mat-card-content>
-  </mat-card>
-</div>
+<h2 mat-dialog-title>Iniciar sesión</h2>
+
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field>
+      <input matInput
+            placeholder="Correo"
+            formControlName="email">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput
+            placeholder="Contraseña"
+            formControlName="password">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput
+            placeholder="Confirmar Contraseña"
+            formControlName="password">
+    </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button class="mat-raised-button"(click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
+</mat-dialog-actions>

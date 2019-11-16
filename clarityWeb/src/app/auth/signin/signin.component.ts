@@ -25,12 +25,7 @@ export class SigninComponent implements OnInit {
     
   }
   
-  onFormSubmit(form: NgForm) {
-    if (!form.valid) {
-      return;
-    }
-    this.authSrv.login(form.value.email, form.value.password);
-  }
+  
   save() {
     this.dialogRef.close(this.form.value);
   }

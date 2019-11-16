@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SigninComponent } from './auth/signin/signin.component'
+import { SigninComponent } from './auth/signin/signin.component';
+import { SignupComponent } from './auth/signup/signup.component'
 
 import {
   MatButtonModule, MatCardModule, MatDialogModule,
@@ -27,13 +28,14 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     AppComponent,
     IndexComponent,
     SigninComponent,
+    SignupComponent,
     FooterComponent,
     HeaderComponent,
     UserProfileComponent
   ],
   imports: [
     BrowserModule,FormsModule, ReactiveFormsModule,
-    AppRoutingModule,    BrowserAnimationsModule, HttpClientModule,
+    AppRoutingModule,BrowserAnimationsModule, HttpClientModule,
     MatButtonModule, MatCardModule, MatDialogModule,
     MatDividerModule, MatExpansionModule, MatFormFieldModule,
     MatInputModule, MatPaginatorModule, MatProgressSpinnerModule,
@@ -42,7 +44,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [SigninComponent]
+  entryComponents: [SigninComponent, SignupComponent]
 
 })
 export class AppModule { }

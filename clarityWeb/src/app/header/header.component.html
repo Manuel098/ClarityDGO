@@ -36,13 +36,13 @@
         <p>Programas</p>    
     </button>
     <span>
-        <button mat-flat-button routerLink="/index" mat-button *ngIf="!userIsAuthenticated" (click)="openDialog()">
+        <button mat-flat-button routerLink="/index" mat-button *ngIf="!userIsAuthenticated" (click)="openLogin()">
             <i class="material-icons">
                 account_circle
             </i>                
             <p>Iniciar Sesión</p>    
         </button>
-        <button mat-flat-button routerLink="/index" mat-button *ngIf="!userIsAuthenticated">
+        <button mat-flat-button routerLink="/index" mat-button *ngIf="!userIsAuthenticated" (click)="openSignUp()">
             <i class="material-icons">
                 supervisor_account
             </i>                
