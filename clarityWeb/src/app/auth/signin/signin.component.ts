@@ -15,7 +15,7 @@ export class SigninComponent implements OnInit {
   ngOnInit() {
   }
   closeModal() {
-    this.headCompon.signInModal();
+    
   }
   onFormSubmit(form: NgForm) {
     if (!form.valid) {

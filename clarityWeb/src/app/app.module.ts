@@ -17,13 +17,15 @@ import {
 } from '@angular/material';
 import { HeaderComponent } from './header/header.component';
 import { from } from 'rxjs';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
