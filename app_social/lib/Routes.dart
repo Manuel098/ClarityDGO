@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:app_social/Screens/Login/index.dart';
 import 'package:app_social/Screens/Home/index.dart';
+import 'structure/footbar.dart';
 
 class Routes {
   Routes() {
@@ -18,8 +19,9 @@ class Routes {
 
           case '/home':
             return new MyCustomRoute(
-              builder: (_) => new LoginScreen(),
+              builder: (_) => new HomeScreen(),
               settings: settings,
+              
             );
         }
       },
@@ -33,8 +35,8 @@ class MyCustomRoute<T> extends MaterialPageRoute<T> {
 
   @override
   Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation, Widget child) {
-    if (settings.isInitialRoute) return child;
-    return new FadeTransition(opacity: animation, child: child);
+    Animation<double> secondaryAnimation, Widget child) {
+      if (settings.isInitialRoute) return child;
+      return new FadeTransition(opacity: animation, child: child);
   }
 }
