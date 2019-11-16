@@ -25,6 +25,14 @@ flutter:
   assets:
    
   - assets/login.jpeg
-  # - assets/home.jpeg
   - assets/logIn.png
+  # Tab
+  - assets/tab_1.png
+  - assets/tab_1s.png
+  - assets/tab_2.png
+  - assets/tab_2s.png
+  - assets/tab_3.png
+  - assets/tab_3s.png
+  - assets/tab_4.png
+  - assets/tab_4s.png
 
