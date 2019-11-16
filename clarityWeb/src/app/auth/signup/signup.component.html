@@ -1,0 +1,24 @@
+<div *ngIf="!userIsAuthenticated ">
+    <mat-card class="card">
+      <mat-card-title>Registro</mat-card-title>
+      <hr>
+      <mat-card-content>
+        <form #noticiaForm="ngForm" (submit)="onFormSubmit(noticiaForm)">
+          <mat-form-field>
+            <input placeholder="Nombre de usuario" matInput name="user" ngModel type="text" #emailInput="ngModel" required>
+          </mat-form-field>
+          <mat-form-field>
+            <input placeholder="Correo" matInput name="email" ngModel type="email" #usernameInput="ngModel" required email>
+          </mat-form-field>
+          <mat-form-field class="com">
+            <input placeholder="Contraseña" matInput name="password" ngModel type="password" #passwordInput="ngModel" required>
+          </mat-form-field>
+          <mat-form-field class="com">
+            <input placeholder="Confirmar Contraseña" matInput name="password2" ngModel type="password" #password2Input="ngModel" required>
+          </mat-form-field>
+          <button mat-raised-button (click)="signup=!signup" class="btn" type="submit">Registrarse</button>
+        </form>
+        <button mat-raised-button class="cancel" (click)="closeModal()">Cancelar</button>
+    </mat-card-content>
+  </mat-card>
+</div>

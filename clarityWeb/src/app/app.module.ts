@@ -3,14 +3,35 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { IndexComponent } from './index/index.component';
+import { FooterComponent } from './footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {
+  MatButtonModule, MatCardModule, MatDialogModule,
+  MatDividerModule, MatExpansionModule, MatFormFieldModule,
+  MatInputModule, MatPaginatorModule, MatProgressSpinnerModule,
+  MatToolbarModule, MatNativeDateModule, MatIconModule,
+  MatSidenavModule, MatListModule, MatTableModule, MatCheckboxModule
+} from '@angular/material';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IndexComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule, MatCardModule, MatDialogModule,
+    MatDividerModule, MatExpansionModule, MatFormFieldModule,
+    MatInputModule, MatPaginatorModule, MatProgressSpinnerModule,
+    MatToolbarModule, MatNativeDateModule, MatIconModule,
+    MatSidenavModule, MatListModule, MatTableModule, MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
