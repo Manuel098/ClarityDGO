@@ -1,4 +1,4 @@
-# app_social
+# best_flutter_ui_templates
 
 A new Flutter project.
 

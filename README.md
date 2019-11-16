@@ -1,7 +1,12 @@
-# ClarityDGO
+# Best-Flutter-UI-Templates
+completely free for everyone. Its build-in Flutter Dart.
 
-##Descripcion 
+![Image](best_flutter_ui_templates/assets/hotel/hotel_booking.png)
+![Image](best_flutter_ui_templates/assets/fitness_app/fitness_app.png)
+![Image](images/custom_drawer.png)
+![Image](best_flutter_ui_templates/assets/design_course/design_course.png)
 
+<<<<<<< Updated upstream
 Crear una aplicacion para la denuncia ciudadana que llegue a la dependencia de gobierno correspondiente, de igual manera en esta aplicacion se presentara el seguimiento de la denuncia, las denuncias ya resueltas y a la par muestra los programas y datos publicos asi como las convocatorias de estas dependencias
 
 Clarity DGO es una aplicacion, sistema web y backend enfocado en la denucnia de errores y anomalias. Este proyecto tiene como meta ser una herramienta que ayude a solucionar la problematica de paz, justicia e instituciones solidas, teniendo enfoque en las instituciones, pero, ¿como logra solucionar este problema clarity DGO? la respuesta es que no lo busca hacer por medios propios pues fue diseñada como una herramienta que pueda optimizar los procesos de trabajo en cuanto a procesar la informacion de los reportes y de igual manera generar una base de datos para el usuario (ciudadanos) en la cual se pueden ver los casos resueltos y por que dependencias de gobierno fueron solucionadas. Para gobierno sera de utilidad debido a que cataloga la denuncia y la manda al area encargada de solucionar el reporte con un valor que represente la urgencia, de esta manera el responsable del area contara con informacion clara y consisa para tomar desiciones y accion. 
@@ -12,3 +17,8 @@ Francisco Javier Felix Godoy
 Alejando Parra Retana
 José Manuel Vladez Gonzalez
 Christian Antonio Avila Sucedo
+=======
+### Some Screenshots
+
+<img src="images/hotel_booking.gif" height="300em"><img src="images/custom_drawer.gif" height="300em"><img src="images/fitness_app.gif" height="300em" /> <img src="images/design_course.gif" height="300em" />
+>>>>>>> Stashed changes
