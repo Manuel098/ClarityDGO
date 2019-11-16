@@ -7,14 +7,17 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SigninComponent } from './auth/signin/signin.component'
 
 import {
   MatButtonModule, MatCardModule, MatDialogModule,
   MatDividerModule, MatExpansionModule, MatFormFieldModule,
   MatInputModule, MatPaginatorModule, MatProgressSpinnerModule,
   MatToolbarModule, MatNativeDateModule, MatIconModule,
-  MatSidenavModule, MatListModule, MatTableModule, MatCheckboxModule
+  MatSidenavModule, MatListModule, MatTableModule, MatCheckboxModule,MAT_DIALOG_DATA
 } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { from } from 'rxjs';
 import { UserProfileComponent } from './user-profile/user-profile.component';
@@ -23,21 +26,23 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
   declarations: [
     AppComponent,
     IndexComponent,
+    SigninComponent,
     FooterComponent,
     HeaderComponent,
     UserProfileComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
+    BrowserModule,FormsModule, ReactiveFormsModule,
+    AppRoutingModule,    BrowserAnimationsModule, HttpClientModule,
     MatButtonModule, MatCardModule, MatDialogModule,
     MatDividerModule, MatExpansionModule, MatFormFieldModule,
     MatInputModule, MatPaginatorModule, MatProgressSpinnerModule,
     MatToolbarModule, MatNativeDateModule, MatIconModule,
     MatSidenavModule, MatListModule, MatTableModule, MatCheckboxModule
   ],
-  providers: [Globals],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
+  entryComponents: [SigninComponent]
+
 })
 export class AppModule { }

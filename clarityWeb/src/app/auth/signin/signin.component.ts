@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component, OnInit, Inject } from '@angular/core';
+import { NgForm, FormGroup, FormBuilder } from '@angular/forms';
 import { AuthService } from '../auth.service';
-import { Router } from '@angular/router';
 import { HeaderComponent } from '../../header/header.component';
-import { Globals } from '../../globals';
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
+
+
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -11,17 +12,30 @@ import { Globals } from '../../globals';
 })
 export class SigninComponent implements OnInit {
 
-  constructor(private router: Router, private globals: Globals, private authSrv: AuthService, private headCompon: HeaderComponent) { }
+  form: FormGroup;
+  description:string;
+  
+
+  constructor(private authSrv: AuthService,private fb: FormBuilder,
+    private dialogRef: MatDialogRef<HeaderComponent>,
+    @Inject(MAT_DIALOG_DATA) data) {
+
+    this.description = data.description;}
   ngOnInit() {
-  }
-  closeModal() {
     
   }
+  
   onFormSubmit(form: NgForm) {
     if (!form.valid) {
       return;
     }
     this.authSrv.login(form.value.email, form.value.password);
-    this.closeModal();
+  }
+  save() {
+    this.dialogRef.close(this.form.value);
+  }
+
+  close() {
+    this.dialogRef.close();
   }
 }

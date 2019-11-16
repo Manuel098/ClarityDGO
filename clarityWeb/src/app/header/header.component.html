@@ -36,7 +36,19 @@
         <p>Programas</p>    
     </button>
     <span>
-        <button mat-flat-button routerLink="/index" mat-button>
+        <button mat-flat-button routerLink="/index" mat-button *ngIf="!userIsAuthenticated" (click)="openDialog()">
+            <i class="material-icons">
+                account_circle
+            </i>                
+            <p>Iniciar Sesión</p>    
+        </button>
+        <button mat-flat-button routerLink="/index" mat-button *ngIf="!userIsAuthenticated">
+            <i class="material-icons">
+                supervisor_account
+            </i>                
+            <p>Registrarse</p>    
+        </button>
+        <button mat-flat-button routerLink="/index" mat-button *ngIf="userIsAuthenticated">
             <i class="material-icons">
                 brightness_2
             </i>

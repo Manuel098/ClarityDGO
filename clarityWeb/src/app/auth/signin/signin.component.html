@@ -1,18 +1,19 @@
-<div class="background" [ngClass]="{'Active': signIn }">
-    <mat-card class="card">
-      <mat-card-title>Iniciar Sesión</mat-card-title>
-      <hr>
-      <mat-card-content>
-        <form #loginForm="ngForm" (submit)="onFormSubmit(loginForm)">
-          <mat-form-field>
-            <input placeholder="Correo" matInput name="email" ngModel type="email" #emailInput="ngModel" required>
-          </mat-form-field>
-          <mat-form-field>
-            <input placeholder="Password" matInput name="password" ngModel type="password" #passwordInput="ngModel" required>
-          </mat-form-field>
-          <button mat-raised-button class="btn" type="submit">Iniciar Sesión</button>
-        </form>
-        <button mat-raised-button class="cancel" (click)="closeModal()">Cancelar</button>        
-      </mat-card-content>
-    </mat-card>      
-</div>
+<h2 mat-dialog-title>Iniciar sesión</h2>
+
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field>
+      <input matInput
+            placeholder="Correo"
+            formControlName="email">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput
+            placeholder="COntraseña"
+            formControlName="password">
+    </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button class="mat-raised-button"(click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
+</mat-dialog-actions>
